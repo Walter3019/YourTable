@@ -37,7 +37,9 @@ module.exports = {
     const token = signToken(newUser);
 
     // send email.
+    // confirmed link is used to user to activate account
     const url = `http://localhost:5000/users/confirmation/${token}`;
+    // put confirmed link in the email body
     const mailOptions = {
       from: 'yourtable <tz883019@gmail.com>',
       to: 'menglingchen3019@gmail.com',
